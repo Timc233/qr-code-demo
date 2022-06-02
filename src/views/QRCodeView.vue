@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import Header from '@/components/Header.vue'
+import QRCodeWindow from '../components/QRCodeWindow.vue'
+import HeaderBar from '../components/HeaderBar.vue'
 </script>
 <template>
-    <Header/>
+    <HeaderBar mb-3rem/>
+    <QRCodeWindow/>
 </template>
