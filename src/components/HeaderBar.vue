@@ -1,3 +1,5 @@
+<script>
+</script>
 <template>
 <div>
     <div w-full 

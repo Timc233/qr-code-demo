@@ -1,10 +1,11 @@
-<script setup lang="ts">
+<script setup>
 import {ref} from "vue"
 const userInputHistory = ref(["input a", "input b", "input c"])
 
 
 
 </script>
+
 <template>
 <div flex h-max>
     <div class="w-1/2"
