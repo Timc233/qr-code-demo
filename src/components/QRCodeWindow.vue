@@ -1,7 +1,8 @@
 <script setup>
 import {ref} from "vue"
+import QrcodeVue from 'qrcode.vue'
 const userInputHistory = ref(["input a", "input b", "input c"])
-
+const userInput = ref("Enter something here")
 
 
 </script>
@@ -15,9 +16,11 @@ const userInputHistory = ref(["input a", "input b", "input c"])
             mx-10
             my-5
             rounded-3xl
+            p-10
             >
-            <h1 text-center
-                py-35>Display Part</h1>
+            <!-- <h1 text-center
+                py-35>Display Part</h1> -->
+            <qrcode-vue :value=userInput size=300 />
         </div>
         <div ml-5>
             <button v-for="i in 5"
@@ -35,14 +38,14 @@ const userInputHistory = ref(["input a", "input b", "input c"])
     <div class="w-1/2"
     bg-blue
     >
-       <form >
-           <input placeholder="User input"
+           <input
+                v-model="userInput"
                 h-10 class="w-3/4"
                 mt-30 mb-10 mx-20
                 rounded
                 b-0
                 p-3>
-       </form>
+       <p>{{userInput}}</p>
        <div flex="~ wrap"
             mx-15>
            <button v-for="item in userInputHistory"
